@@ -169,16 +169,8 @@ public class TaintAnalysisHandler extends OnFlyHandler {
         });
         List<JClass> list = solver.getHierarchy().applicationClasses().toList();
         MethodCollector methodCollector = new MethodCollector(SourcesMethondStr,list,fieldSources);
-//        pairConfig = methodCollector.collectMethods();
-//        analyzeCallSources(list);
-//        fieldContainers = fieldContainers(fieldSources);
-//        handleFieldSources = !fieldSources.isEmpty();
-//        for (JClass class1 : ClassOfContainSources) {
-//            for (JMethod m : class1.getDeclaredMethods()) {
-//                if (m.getName().equals("<init>")) continue;
-//                MethodsOfContainSources.add(m);
-//            }
-//        }
+        pairConfig = methodCollector.collectMethods();
+        analyzeCallSources(list);
         emptyContext = solver.getContextSelector().getEmptyContext();
         context.config().transfers()
                 .forEach(t -> {
@@ -275,44 +267,6 @@ public class TaintAnalysisHandler extends OnFlyHandler {
     }
 
 
-
-    // 判断五种条件，来决定该invoke是否需要探查:返回true说明需要探查,false不需要探查
-//    @Override
-//    public boolean judgeCheck(Edge<CSCallSite, CSMethod> edge, CSVar csVar, AtomicBoolean flagInit) {
-//        JMethod method = edge.getCallee().getMethod();
-//        Context context = edge.getCallSite().getContext();
-//        Invoke callSite = edge.getCallSite().getCallSite();
-//
-//        // 基于配置判断是否是特殊方法，需要进行深入分析
-//        boolean methodRequiresDeepAnalysis = isMethodSignificantForAnalysis(method, callSite);
-//
-//        // 检查变量和参数是否有污点
-//        boolean taintDetected = checkForTaint(csVar, context, callSite);
-//
-//        // 为特殊方法或存在污点，设置flagInit
-//        flagInit.set(flagInit.get() || methodRequiresDeepAnalysis || taintDetected);
-//
-//        return flagInit.get();
-//    }
-
-
-
-    private boolean checkForTaint(CSVar csVar, Context context, Invoke callSite) {
-        // 1. 判断pts(recv)是否包含taint
-        boolean taintDetected = csVar != null && checkPointsToSetForTaint(solver.getPointsToSetOf(csVar));
-
-        // 2.判断pts(arg)是否包含taint
-        InvokeExp invokeExp = callSite.getInvokeExp();
-        for (Var arg : invokeExp.getArgs()) {
-            if (checkPointsToSetForTaint(solver.getPointsToSetOf(csManager.getCSVar(context, arg)))) {
-                taintDetected = true;
-                break;
-            }
-        }
-
-        return taintDetected;
-    }
-
     private boolean checkPointsToSetForTaint(PointsToSet pts) {
         for (CSObj csObj : pts) {
             if (manager.isTaint(csObj.getObject())) {
@@ -328,71 +282,37 @@ public class TaintAnalysisHandler extends OnFlyHandler {
         JMethod method = edge.getCallee().getMethod();
         Context context = edge.getCallSite().getContext();
         Invoke callSite = edge.getCallSite().getCallSite();
-        Var lhs = callSite.getResult();
-//         如果输入为构造方法,判断方法的类是否属于SourcesClasses,则方法构造方法
-//        if (method.getName().equals("<init>"))
-//            return true;
 
         // 判断该方法是否包含taint-config中方法的调用语句或者field复制语句,存在则探查
-        // 以及判断该方法所在语句的所在方法是否属于 1. 存在source的方法 2. 存在source的声明类所有方法 中
-//        boolean taintOfConfigFlag = MethodsOfContainSources.contains(method) || MethodsOfContainFieldSource.contains(method) || MethodsOfContainSources.contains(callSite.getContainer());
-
         // 以及判断该方法所在语句的所在方法是否属于 1. 存在source的方法 2. 存在source被调用链上
-//        boolean taintOfConfigFlag = pairConfig.methodsStrOfSourcesContainer().contains(method.getName()) || pairConfig.methodsOfContainSources().contains(method);
-        boolean taintOfConfigFlag = true;
+        boolean taintOfConfigFlag = pairConfig.methodsStrOfSourcesContainer().contains(method.getName()) || pairConfig.methodsOfContainSources().contains(method);
         //  传入的flagInit判断该所被调用的方法是否需要探查(transfer除外)
         // 如果该方法所在语句属于1. 存在source的方法 或者 2. 存在source被调用链上,即使没有污点传入和产生,也设置为true
         if (!flagInit.get() && taintOfConfigFlag)
             flagInit.set(true);
-        flagInit.set(true);
         // 1. 判断pts(recv)是否包含taint
-        boolean taintOfVarFlag = true;
+        boolean taintOfVarFlag = false;
         if (csVar != null)
             for (CSObj recvObj : solver.getPointsToSetOf(csVar)) {
                 taintOfVarFlag = manager.isTaint(recvObj.getObject());
-//                if (taintOfVarFlag) {
-//                    break;
-//                }
+                if (taintOfVarFlag) {
+                    break;
+                }
             }
 
         // 2.判断pts(argu)是否包含taint
         InvokeExp invokeExp = callSite.getInvokeExp();
         List<Var> args = invokeExp.getArgs();
-        boolean taintOfArgFlag = true;
+        boolean taintOfArgFlag = false;
         for (Var arg : args) {
             for (CSObj csObj : solver.getPointsToSetOf(csManager.getCSVar(context, arg))) {
                 if (manager.isTaint(csObj.getObject())) {
                     taintOfArgFlag = true;
-//                    break;
+                    break;
                 }
             }
-//            if (taintOfArgFlag) break;
+            if (taintOfArgFlag) break;
         }
-
-
-//        Set<TaintTransfer> tfs = transfers.get(method);
-//        if (!tfs.isEmpty()) {
-//            // 3. 当已确认args或var存在污点,
-//            // 那么返回导致var或return(lhs)存在污点,
-//            if (taintOfVarFlag || taintOfArgFlag) {
-//                //  如果调用边的类型是 CallKind.OTHER（例如反射调用），当前不处理这些调用边，直接返回。
-//                if (edge.getKind() == CallKind.OTHER) {
-//                    return flagInit.get();
-//                }
-//                tfs.forEach(tf -> processTransfer(context, callSite, tf));
-//                // 这种传播类函数的内部内容不需要探究
-//                return flagInit.get();
-//            }
-//            // 为transfer非静态方法方法但没有污点,正常传播: base->result
-//            // 这里假设所有transfer方法的result和base是同一类型
-//            else if (csVar != null && lhs != null) {
-//                // pass results to LHS variable
-//                CSVar to = csManager.getCSVar(context, lhs);
-//                solver.propagateNew(to, solver.getPointsToSetOf(csVar));
-//            }
-//
-//
-//        }
 
         // 处理不同对象类型的变量之间的污点传播
         //   获取被调用方法的污点转移集合 tfs
@@ -409,7 +329,6 @@ public class TaintAnalysisHandler extends OnFlyHandler {
                         if (tmpClass.contains(jClass)) {
                             f2 = true;
                         }
-
                         // 检查 jClass 的所有父接口
                         for (JClass superInterface : jClass.getInterfaces()) {
                             if (tmpClass.contains(superInterface)) {
@@ -464,7 +383,6 @@ public class TaintAnalysisHandler extends OnFlyHandler {
         }
 
 
-
         // 4. 判断方法本身所在invoke语句是否为paramsource,是则传播<param,taint>,使得pts<param>包含taint
         // OnNewCSMethod方法下的handleparamSource
         // 可能source为接口方法,传入的method为实现类的重写方法,导致不一致,需要考虑
@@ -514,8 +432,6 @@ public class TaintAnalysisHandler extends OnFlyHandler {
                             addArrayFieldTaintNew(pts, info);
                         }
 
-//                        sourceInfos.put(
-//                                param, new SourceInfo(indexRef, taint));
                     }
                     case FIELD -> {
                         Obj taint = manager.makeTaint(sourcePoint, source.type());
@@ -525,43 +441,17 @@ public class TaintAnalysisHandler extends OnFlyHandler {
                         if (pts.isEmpty())
                             pts.addObject(csManager.getCSObj(context, taint));
                         addArrayFieldTaintNew(pts, info);
-//                        sourceInfos.put(
-//                                param, new SourceInfo(indexRef, taint));
+
                     }
                 }
             });
         }
 
-//        boolean isMappingMethod = !method.getAnnotations()
-//                .stream().filter(
-//                        annotation -> annotation.getType().matches("org.springframework.web.bind.annotation.\\w+Mapping")
-//                ).toList().isEmpty();
-//        if(isMappingMethod){
-//            for (int i = 0; i < ir.getParams().size(); i++) {
-//                Var param = ir.getParam(i);
-////                if(param.getType().getName().startsWith("javax.servlet.http.HttpServletRequest") || param.getType().getName().startsWith("javax.servlet.ServletRequest")){
-//                    SourcePoint sourcePoint = new ParamSourcePoint(method, new IndexRef(IndexRef.Kind.VAR, i, null));
-//                    Obj taint = manager.makeTaint(sourcePoint, param.getType());
-//                    solver.propagateNew(context, param, taint);
-////                }
-//            }
-//        }
+        if(taintOfVarFlag || taintOfArgFlag || taintOfParamFlag || taintOfConfigFlag)
+            return true;
+        else
+            return flagInit.get();
 
-
-
-//        if (!flagInit.get() && (taintOfVarFlag || taintOfArgFlag || taintOfParamFlag || taintOfConfigFlag))
-//            flagInit.set(true);
-//        if(taintOfVarFlag || taintOfArgFlag || taintOfParamFlag || taintOfConfigFlag)
-//            return true;
-//        else
-//            return flagInit.get();
-    return true;
-//        // 不探查该函数,且
-//        else if(lhs!=null && tfs.isEmpty()){
-//            CSVar to = csManager.getCSVar(context,lhs);
-//
-//            solver.propagateNew(context,callSite.getResult());
-//        }
     }
 
     /**
@@ -625,9 +515,6 @@ public class TaintAnalysisHandler extends OnFlyHandler {
         switch (indexRef.kind()) {
             //对baseObjs中的每个抽象对象调用csManager的getArrayIndex方法获得对应的数组索引arrayIndex
             // 对流中的每个数组索引，执行solver对象的propagate方法，将taint传递给arrayIndex。
-//            case ARRAY -> baseObjs.objects()
-//                    .map(csManager::getArrayIndex)
-//                    .forEach(arrayIndex -> solver.propagateNew(arrayIndex, taint));
             case ARRAY -> baseObjs.objects().forEach(o ->{
                 if(o.getObject().getType() instanceof  ArrayType){
                     solver.propagateNew(csManager.getArrayIndex(o),taint);
@@ -758,13 +645,6 @@ public class TaintAnalysisHandler extends OnFlyHandler {
         switch (info.kind()) {
 //            VAR_TO_ARRAY：变量转移到数组。
             case VAR_TO_ARRAY -> {
-                // 遍历from的指向集的每个污点对象,并转换成相应的数组索引,最后通过solver的addPFGEdge添加到PFG,入WL
-//                baseObjs.objects()
-//                        .map(csManager::getArrayIndex)
-//                        .forEach(arrayIndex ->
-//                                solver.addPFGEdgeAndPropagate(
-//                                        new TaintTransferEdge(csVar, arrayIndex),
-//                                        tf));
                 baseObjs.objects().forEach(o -> {
                     if(o.getObject().getType() instanceof ArrayType){
                         solver.addPFGEdgeAndPropagate(

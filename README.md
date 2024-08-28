@@ -14,9 +14,10 @@ EffiTaint is a novel static taint analysis tool designed to address the limitati
 
 EffiTaint introduces significant modifications to the original Tai-e project, including:
 
-- **EffitaintSolver**: Rewritten the 'defaultSolver' from Tai-e as 'EffitaintSolver' and modified related plugins to ensure compatibility.
+- **EffitaintSolver**: Rewritten the `defaultSolver` from Tai-e as `EffitaintSolver` and modified related plugins to ensure compatibility.
 - **Taint Analysis Modules**: Rewritten the `SourceHandler` and `TransferHandler` modules, and introduced a new `TaintAnalysisHandler` module for enhanced taint tracking.
 - **Reflection Analysis**: Added reflection analysis specifically for the `Field.get()` method in the reflection plugin, improving the handling of reflective access patterns.
+- **...**
 
 
 ## Installation
@@ -33,9 +34,33 @@ To install and set up EffiTaint:
 ## Usage
 EffiTaint can be integrated into your Java projects to analyze taint flows. Follow these steps to use EffiTaint:
 
-1. Configure the sources and sinks in the configuration files.
-2. Run the analysis with the provided scripts or integrate EffiTaint into your CI/CD pipeline.
+1. Configure the sources and sinks in the configuration files.We recommend using the configuration file (.yml) suggested by Tai-e to configure sources, sinks, and a series of other settings. You can refer to the examples provided in the `config/common` directory for more details.
+2. Run the analysis with the provided scripts.Set the command line parameter as follows:
+
+    ```bash
+    --options-file=config/common/XXX.yml
+
 3. View the analysis reports generated in the output directory.
+
+### Integration and Usage of Jasmine Analysis
+
+1. Jasmine module is included by default. If not needed, you can remove it in the configuration file.
+2. To integrate Jasmine framework, simply add the following code:
+
+   **Import the following package:**
+
+    ```java
+    import jasmine.analysis.CreateEdge;
+    ```
+
+   **Then, insert the following code in the `build()` of `SootWordBuilder.java`:**
+
+    ```java
+    CreateEdge edge = new CreateEdge();
+    String path = System.getProperty("user.dir") + File.separator + "src/main/resources/config.properties";
+    edge.initCallGraph(path);
+    ```
+
 ## Benchmarks
 EffiTaint has been tested on the SecuriBench Micro suite, showing superior performance compared to FlowDroid and Tai-e:
 

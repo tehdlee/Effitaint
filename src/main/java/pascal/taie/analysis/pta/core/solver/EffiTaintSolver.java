@@ -285,11 +285,9 @@ public class EffiTaintSolver implements Solver {
     private void initialize() {
         callGraph = new CSCallGraph(csManager);
         pointerFlowGraph = new PointerFlowGraph(csManager);
-//        workList = new WorkList();
         reachableMethods = Sets.newSet();
         initializedClasses = Sets.newSet();
         ignoredMethods = Sets.newSet();
-//        stmtProcessor = new StmtProcessor();
         isTimeout = false;
         if (timeLimit != UNLIMITED) {
             timeLimiter = new TimeLimiter(timeLimit);
@@ -343,16 +341,11 @@ public class EffiTaintSolver implements Solver {
         plugin.onFinish();
     }
 
-//    private static final int MAX_DEPTH = 100;  // 最大递归深度
-//    private static int currentDepth = 0;       // 当前递归深度
 
 
     @Override
     public void propagateNew(Pointer pointer, PointsToSet pointsToSet){
-//        if (currentDepth > MAX_DEPTH) {
-//            logger.warn("Reached maximum recursion depth at pointer: {}", pointer);
-//            return; // 达到最大递归深度，停止递归
-//        }
+
         logger.trace("Propagate {} to {}", pointsToSet, pointer);
         Set<Predicate<CSObj>> filters = pointer.getFilters();
         if (!filters.isEmpty()) {
@@ -471,95 +464,6 @@ public class EffiTaintSolver implements Solver {
 
         return false;
     }
-
-
-    // Processes a single statement and returns true if a new method traversal is pushed to the stack
-//    public boolean processStatement(JMethod container, Context context, Stmt stmt, ChainedIterator<Stmt> stmtIterator, Deque<VisitorState> stack,AtomicBoolean flagInit){
-//        CSMethod csMethod = csManager.getCSMethod(context, container);
-//        processStrongUpdate(context,stmt);
-//        plugin.onNewStmt(stmt,container,context);
-//        if(container.getName().equals("doGet"))
-//            container.getName();
-//        if(container.getName().equals("<init>"))
-//            container.getName();
-//        if(container.getName().equals("getHeaderNames"))
-//            container.getName();
-//        if(container.getName().equals("main"))
-//            container.getName();
-//        if(container.getName().equals("enumeration"))
-//            container.getName();
-//        if(container.getName().equals("keySet"))
-//            container.getName();
-//        if(container.getName().equals("callEntry_synthetic"))
-//            container.getName();
-//        if(container.getName().equals("logIfEnabled"))
-//            container.getName();
-//        if(container.getName().equals("logMessage"))
-//            container.getName();
-//        if(container.getName().equals("logMessageSafely"))
-//            container.getName();
-//        if(container.getName().equals("logMessageTrackRecursion"))
-//            container.getName();
-//        if(container.getName().equals("tryLogMessage"))
-//            container.getName();
-//        if(container.getName().equals("log"))
-//            container.getName();
-//        if(container.getName().equals("access$200"))
-//            container.getName();
-//        if(container.getName().equals(" logWithVarargTranslator"))
-//            container.getName();
-//        if(container.getName().equals("makeMessageImmutable"))
-//            container.getName();
-//        if(container.getName().equals("setMessage"))
-//            container.getName();
-//        if(container.getName().equals("setMessage"))
-//            container.getName();
-//        if(container.getName().equals("format"))
-//            container.getName();
-//        if(container.getName().equals("logWithVarargTranslator"))
-//            container.getName();
-//        if(container.getName().equals("makeMessageImmutable"))
-//            container.getName();
-//        if(container.getName().equals("setMessage"))
-//            container.getName();
-//        if(container.getName().equals("substitute"))
-//            container.getName();
-//        if(container.getName().equals("resolveVariable"))
-//            container.getName();
-//        if(container.getName().equals("getMessage"))
-//            container.getName();
-////        if(container.getMethodSource().toString().equals("<org.apache.logging.log4j.message.SimpleMessage: java.lang.String getFormattedMessage()>"))
-////            container.getName();
-////        if(container.getMethodSource().toString().equals("<org.apache.logging.log4j.spi.AbstractLogger: void tryLogMessage(java.lang.String,java.lang.StackTraceElement,org.apache.logging.log4j.Level,org.apache.logging.log4j.Marker,org.apache.logging.log4j.message.Message,java.lang.Throwable)>"))
-////            container.getName();
-////        if(container.getMethodSource().toString().equals("<org.apache.logging.log4j.core.pattern.MessagePatternConverter: void format(org.apache.logging.log4j.core.LogEvent,java.lang.StringBuilder)>"))
-////            container.getName();
-//
-//
-//
-//        if (stmt instanceof New) {
-//            return processNewStatement(container, context, (New) stmt, stmtIterator, stack, csMethod,flagInit);
-//        } else if (stmt instanceof LoadField) {
-//            processLoadFieldStatement(context, (LoadField) stmt, csMethod);
-//        } else if (stmt instanceof StoreField) {
-//            processStoreFieldStatement(context, (StoreField) stmt, csMethod);
-//        } else if (stmt instanceof AssignLiteral) {
-//            processAssignLiteralStatement(context, (AssignLiteral) stmt, csMethod);
-//        } else if (stmt instanceof Copy) {
-//            processCopyStatement(context, (Copy) stmt);
-//        } else if (stmt instanceof Cast) {
-//            processCastStatement(context, (Cast) stmt);
-//        } else if (stmt instanceof StoreArray) {
-//            processStoreArrayStatement(context, (StoreArray) stmt, csMethod);
-//        } else if (stmt instanceof LoadArray) {
-//            processLoadArrayStatement(context, (LoadArray) stmt, csMethod);
-//        } else if (stmt instanceof Invoke) {
-//            return processInvokeStatement(container, context, (Invoke) stmt, stmtIterator, stack,flagInit);
-//        }
-//
-//        return false;
-//    }
-
 
 
     private void removeEdges(Pointer pointer){
@@ -786,21 +690,6 @@ public class EffiTaintSolver implements Solver {
     }
 
     private void processStoreArrayStatement(Context context, StoreArray storeArrayStmt, CSMethod csMethod) {
-//        Var rvalue = storeArrayStmt.getRValue();
-//        CSVar from = csManager.getCSVar(context, rvalue);
-//        Var toArrayVar = storeArrayStmt.getLValue().getBase();
-//        CSVar toCSArrayVar = csManager.getCSVar(context, toArrayVar);
-//        if (propTypes.isAllowed(rvalue)) {
-//            PointsToSet ptsArray = getPointsToSetOf(toCSArrayVar);
-//            for (CSObj csObj : ptsArray) {
-//                if (csObj.getObject().isFunctional()) {
-//                    ArrayIndex arrayIndex = csManager.getArrayIndex(csObj);
-//                    // strong_update
-//                    removeEdges(arrayIndex);
-//                    addPFGEdgeAndPropagate(new PointerFlowEdge(FlowKind.ARRAY_STORE, from, arrayIndex), arrayIndex.getType());
-//                }
-//            }
-//        }
 
         Var rvalue = storeArrayStmt.getRValue();
         CSVar from = csManager.getCSVar(context, rvalue);
@@ -877,21 +766,6 @@ public class EffiTaintSolver implements Solver {
     }
 
     private void processLoadArrayStatement(Context context, LoadArray loadArrayStmt, CSMethod csMethod) {
-//        Var lvalue = loadArrayStmt.getLValue();
-//        CSVar to = csManager.getCSVar(context, lvalue);
-//        // strong_update
-//        removeEdges(to);
-//        Var fromArrayVar = loadArrayStmt.getArrayAccess().getBase();
-//        CSVar from = csManager.getCSVar(context, fromArrayVar);
-//        PointsToSet ptsArray = getPointsToSetOf(from);
-//        if (propTypes.isAllowed(lvalue)) {
-//            ptsArray.forEach(array -> {
-//                if (array.getObject().isFunctional()) {
-//                    ArrayIndex arrayIndex = csManager.getArrayIndex(array);
-//                    addPFGEdgeAndPropagate(arrayIndex, to, FlowKind.ARRAY_LOAD);
-//                }
-//            });
-//        }
         Var lvalue = loadArrayStmt.getLValue();
         CSVar to = csManager.getCSVar(context, lvalue);
         // strong_update
@@ -943,13 +817,7 @@ public class EffiTaintSolver implements Solver {
 
     }
 
-//    @Override
-//    public PointsToSet getPtsArrayElems(Pointer pointer){
-//        PointsToSet pts = makePointsToSet();
-//        if(elementsArray.containsKey(pointer))
-//            pts.addObject(elementsArray.get(pointer)[0]);
-//        return pts;
-//    }
+
 
     // config: 污点默认为全数组传播,取第一个元素
     @Override
@@ -1007,8 +875,6 @@ public class EffiTaintSolver implements Solver {
             Context calleeCtx = contextSelector.selectContext(csCallSite, callee);
             CSMethod csCallee = csManager.getCSMethod(calleeCtx, callee);
             ChainedIterator<Stmt> calleeStmts = new ChainedIterator<>(callee.getIR().iterator());
-//            if(callee.getName().equals("getConnection"))
-//                callee.getName().equals("getConnection");
 
             reachableMethods.add(callee);
             boolean f3 = false;
@@ -1044,25 +910,9 @@ public class EffiTaintSolver implements Solver {
                             }
                         }
                         plugin.onNewCSMethod(csCallee);
-
                     }
-
                 }
             }
-
-
-//            boolean f2= false;
-//            if(initMethod!=null) {
-//                Var initThisVar = initMethod.getIR().getThis();
-//                Context initCtx = calleeCtx;
-//                CSMethod csInit = csManager.getCSMethod(initCtx, initMethod);
-//                if (reachableMethods.add(initMethod)) {
-//                    callGraph.addReachableMethod(csInit);
-//                    CSVar csInitThisVar = csManager.getCSVar(initCtx, initThisVar);
-//                    f2 = processInstanceInvoke(callee, calleeCtx, csInitThisVar, csInit, calleeCtx, calleeStmts, stack, flagInit);
-//                }
-//            }
-
             return f1 || f3;
         }
         return false;
@@ -1074,34 +924,6 @@ public class EffiTaintSolver implements Solver {
         if(invokeExp instanceof  InvokeInstanceExp invokeInstanceExpStmt){
             Var var = invokeInstanceExpStmt.getBase();
             CSVar csVar = csManager.getCSVar(context, var);
-            // 如果调用方法的recv为的指向集为空,则往前遍历找到左值为csvar的invoke语句,设置flag为true
-
-//            if(getPointsToSetOf(csVar)==null)
-//                if(csVar.getVar().getName().equals("con"));
-//                    csVar.getVar().getName().equals("con");
-//                for(Stmt stmt: container.getIR().getStmts()){
-//                    if(stmt.getDef().isPresent() && stmt.getDef().get().equals(var) && stmt instanceof Invoke){
-//                        processInvokeStatement(container,context,(Invoke) stmt,stmtIterator,stack,true);
-//                    }
-//
-//                }
-
-//            if(container.getName().equals("jdbc_sqli_sec"))
-//                container.getName().equals("jdbc_sqli_sec");
-//            if(container.getName().equals("jdbc_sqli_vul") && var.getName().equals("$r7"))
-//                container.getName();
-//
-//            if(container.getName().equals("jdbc_sqli_vul") && invokeExp.getUses().stream().collect(Collectors.toList()).get(0).toString().equals("toClosed"))
-//                container.getName().equals("jdbc_sqli_vul");
-            // 处理csvar指向集为空,没有被定义而导致该调用方法无法被处理的情况
-            // to do 后续为
-//            if(getPointsToSetOf(csVar).isEmpty()){
-//                IRBuildHelper irBuildHelper = new IRBuildHelper(container);
-//                Type type = var.getType();
-//                Obj mockObj = heapModel.getMockObj(LHS_DESC,irBuildHelper.newTempVar(type),type,container);
-//                Context context1 = contextSelector.selectHeapContext(csManager.getCSMethod(context,container),mockObj);
-//                propagateNew(csVar,csManager.getCSObj(context1,mockObj));
-//            }
             PointsToSet originalSet = getPointsToSetOf(csVar);
             PointsToSet copySet = originalSet.copy();
             for (CSObj recvObj : copySet) {
@@ -1109,23 +931,9 @@ public class EffiTaintSolver implements Solver {
                 if(callee==null){
                     Type objType = var.getType();
                     //变量的类型方法
-                    JMethod calleeReal = CallGraphs.resolveCallee(objType, invokeStmt);
-                    callee = calleeReal;
+                    callee = CallGraphs.resolveCallee(objType, invokeStmt);
                 }
                 if (callee != null) {
-//                    if(container.getName().equals("jdbc_sqli_vul") && callee.getName().equals("append") && var.getName().equals("$r7"))
-//                        callee.getName();
-//                    if(container.getName().equals("jdbc_sqli_vul") && callee.getName().equals("isClosed"))
-//                        callee.getName();
-//                    if(callee.getName().equals("setData"))
-//                        callee.getName();
-//                    if(callee.getName().equals("executeQuery"))
-//                        callee.getName();
-//                    if(callee.getName().equals("createStatement"))
-//                        callee.getName();
-//
-//                    if(callee.getName().equals("append") && container.getName().equals("jdbc_sqli_vul"))
-//                        callee.getName();
                     CSCallSite csCallSite = csManager.getCSCallSite(context, invokeStmt);
                     Context calleeContext = contextSelector.selectContext(csCallSite, recvObj, callee);
                     CSMethod csCallee = csManager.getCSMethod(calleeContext, callee);
@@ -1184,69 +992,6 @@ public class EffiTaintSolver implements Solver {
 
         return f1;
     }
-
-//    private boolean processInstanceInvoke(JMethod container, Context context, Invoke invokeStmt, ChainedIterator<Stmt> stmtIterator, Deque<VisitorState> stack, AtomicBoolean flagInit) {
-//        InvokeExp invokeExp = invokeStmt.getInvokeExp();
-//        if (!(invokeExp instanceof InvokeInstanceExp instanceExp)) {
-//            return false;
-//        }
-//
-//        Var baseVar = instanceExp.getBase();
-//        CSVar csBaseVar = csManager.getCSVar(context, baseVar);
-//        PointsToSet basePts = getPointsToSetOf(csBaseVar);
-//
-//        if (basePts.isEmpty()) {
-//            // Attempt to handle unhandled base variable points-to set.
-//            handleUndefinedBaseVariable(baseVar, container, context);
-//            return false;  // Early exit if base points-to set is still empty.
-//        }
-//
-//        boolean hasNewTraversal = false;
-//        for (CSObj recvObj : basePts) {
-//            JMethod callee = CallGraphs.resolveCallee(recvObj.getObject().getType(), invokeStmt);
-//            if (callee == null) {
-//                plugin.onUnresolvedCall(recvObj, context, invokeStmt);
-//                continue;
-//            }
-//
-//            Context calleeContext = contextSelector.selectContext(csManager.getCSCallSite(context, invokeStmt), recvObj, callee);
-//            CSMethod csCallee = csManager.getCSMethod(calleeContext, callee);
-//            plugin.onNewCSMethod(csCallee);
-//            reachableMethods.add(callee);
-//
-//            Edge<CSCallSite, CSMethod> edge = new Edge<>(CallGraphs.getCallKind(invokeStmt), csManager.getCSCallSite(context, invokeStmt), csCallee);
-//            if (callGraph.addEdge(edge) && edge.getKind() != CallKind.OTHER && !isIgnored(callee)) {
-//                processEdgeTransfer(edge);
-//                boolean isInitialization = flagInit.get() || "<init>".equals(callee.getName());
-//                if (plugin.judgeCallSource(edge, new AtomicBoolean(isInitialization))) {
-//                    // Further handling of special source cases
-//                    addPtsAndPropagate(calleeContext, callee.getIR().getThis(), recvObj);
-//                    handleMethodTraversal(callee, calleeContext, new AtomicBoolean(isInitialization), stack);
-//                    plugin.TransferCallSource(edge);
-//                } else if (plugin.judgeCheck(edge, csBaseVar, new AtomicBoolean(isInitialization))) {
-//                    // Handle method traversal when conditions meet
-//                    addPtsAndPropagate(calleeContext, callee.getIR().getThis(), recvObj);
-//                    stack.push(new VisitorState(container, context, stmtIterator, flagInit));
-//                    stack.push(new VisitorState(callee, calleeContext, new ChainedIterator<>(callee.getIR().iterator()), new AtomicBoolean(isInitialization)));
-//                    hasNewTraversal = true;
-//                }
-//            }
-//        }
-//        return hasNewTraversal;
-//    }
-
-    private void handleUndefinedBaseVariable(Var baseVar, JMethod container, Context context) {
-        // Handle cases where the base variable points-to set might be undefined.
-        // Log, recover, or otherwise address such cases as per your application needs.
-        logger.warn("Undefined points-to set for variable {} in method {}", baseVar, container.getName());
-    }
-
-    private void handleMethodTraversal(JMethod method, Context context, AtomicBoolean flagInit, Deque<VisitorState> stack) {
-        // Handle the method traversal logic, e.g., deep traversal for initialization or specific methods.
-        // This method can be filled with specific traversal logic as per your analysis needs.
-        stack.push(new VisitorState(method, context, new ChainedIterator<>(method.getIR().iterator()), flagInit));
-    }
-
 
     // 定义基本类型和不可变类型集合
     private static final Set<Class<?>> IMMUTABLE_TYPES = new HashSet<>();
@@ -1330,17 +1075,6 @@ public class EffiTaintSolver implements Solver {
         return  IMMUTABLE_TYPES.contains(clazz);
     }
 
-//    public void propagate(Var var,Context currContext,Context heapContext,Obj obj){
-//        //创建PTS对象,并传播
-//        Var var = assignLiteralStmt.getLValue();
-//        Pointer point = csManager.getCSVar(context,var);
-//        PointsToSet pts = makePointsToSet();
-//        pts.addObject(csManager.getCSObj(heapContext,obj));
-//        propagate(point,pts);
-//    }
-//    public void addPFGEdgeAndPropagate(Context context, Var var,CSObj csObj){
-//        addPFGEdgeAndPropagate(csManager.getCSVar(context,var),csObj);
-//    }
     public void addPtsAndPropagate(Context context,Var var,Context heapContext,Obj obj){
           addPtsAndPropagate(context,var,csManager.getCSObj(heapContext,obj));
     }
@@ -1367,11 +1101,6 @@ public class EffiTaintSolver implements Solver {
         if (edge != null && edge.addTransfer(transfer)) {
             PointsToSet targetSet = transfer.apply(
                     edge, getPointsToSetOf(edge.source()));
-//            getPointsToSetOf(edge.source()).forEach(csobj ->{
-//                if(csobj.getObject() instanceof MockObj mockObj && mockObj.getDescriptor().string().equals("TaintObj"))
-//                    targetSet.addObject(csobj);
-//            }
-//            );
             if (!targetSet.isEmpty()) {
                 //传播
                 propagateNew(edge.target(), targetSet);
@@ -1455,30 +1184,6 @@ public class EffiTaintSolver implements Solver {
         }
     }
 
-
-    private void processNewMultiArray(
-            New allocSite, Context arrayContext, Obj array,CSMethod csMethod) {
-        NewMultiArray newMultiArray = (NewMultiArray) allocSite.getRValue();
-        Obj[] arrays = newArrays.computeIfAbsent(newMultiArray, nma -> {
-            ArrayType type = nma.getType();
-            Obj[] newArrays = new MockObj[nma.getLengthCount() - 1];
-            for (int i = 1; i < nma.getLengthCount(); ++i) {
-                type = (ArrayType) type.elementType();
-                newArrays[i - 1] = heapModel.getMockObj(MULTI_ARRAY_DESC,
-                        allocSite, type, allocSite.getContainer());
-            }
-            return newArrays;
-        });
-        for (Obj newArray : arrays) {
-            Context elemContext = contextSelector
-                    .selectHeapContext(csMethod, newArray);
-            CSObj arrayObj = csManager.getCSObj(arrayContext, array);
-            ArrayIndex arrayIndex = csManager.getArrayIndex(arrayObj);
-            propagateNew(arrayIndex, elemContext, newArray);
-            array = newArray;
-            arrayContext = elemContext;
-        }
-    }
     private void  processNewMultiArrayNew(New allocSite, ArrayIndex arrayIndexBase,CSMethod csMethod,IRBuildHelper irBuildHelper){
         NewMultiArray newMultiArray = (NewMultiArray) allocSite.getRValue();
         // 获得第一维的长度
@@ -1521,47 +1226,6 @@ public class EffiTaintSolver implements Solver {
                 hierarchy.dispatch(newExp.getType(), finalizeRef));
     }
 
-//    private void processFinalizer(New stmt,CSMethod csMethod,Context context) {
-//        Invoke registerInvoke = registerInvokes.computeIfAbsent(stmt, s -> {
-//            InvokeStatic callSite = new InvokeStatic(registerRef,
-//                    Collections.singletonList(s.getLValue()));
-//            Invoke invoke = new Invoke(csMethod.getMethod(), callSite);
-//            invoke.setLineNumber(stmt.getLineNumber());
-//            return invoke;
-//        });
-//        processInvokeStatic(registerInvoke,context);
-//
-//    }
-
-//    private void processInvokeStatic(Invoke callSite,Context context) {
-//        JMethod callee = CallGraphs.resolveCallee(null, callSite);
-//        if (callee != null) {
-//            CSCallSite csCallSite = csManager.getCSCallSite(context, callSite);
-//            Context calleeCtx = contextSelector.selectContext(csCallSite, callee);
-//            // 加入可达方法列表
-//            CSMethod csCallee = csManager.getCSMethod(calleeCtx, callee);
-//            callGraph.addReachableMethod(csCallee);
-//            Edge<CSCallSite,CSMethod> edge = new Edge<>(CallKind.STATIC, csCallSite, csCallee);
-//            processEdgeTransfer(edge);
-//            if (edge.getKind()!=CallKind.OTHER && !isIgnored(callee)) {
-//                // true说明需要探查,false不需要探查该invoke的具体方法
-//                if(plugin.judgeCheck(edge,false)) {
-//                    // 2. 构建并传播ret-lhs,arg-param
-////                    callee.getIR().stmts().forEach(stmt -> {
-////                        stack.addLast(new Object[]{callee, calleeCtx, stmt, false});
-////
-//////                        visitor(callee, calleeCtx, stmt,false);
-////                    });
-//                    // Push the current state back to the stack
-//                    stack.push(new VisitorState(container, context, stmts));
-//
-//                    // Push the callee state to the stack
-//                    stack.push(new VisitorState(callee, calleeContext, new ChainedIterator<>(callee.getIR().iterator())));
-//
-//                }
-//            }
-//        }
-//    }
 
 
     @Override

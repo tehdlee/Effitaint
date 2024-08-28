@@ -49,9 +49,6 @@ public class TaintAnalysis extends CompositePlugin {
                 solver.getTypeSystem());
         logger.info(config);
         context = new HandlerContext(solver, manager, config);
-//        addPlugin(new SourceHandler(context),
-//                new TransferHandler(context),
-//                new SanitizerHandler(context));
         addPlugin(new TaintAnalysisHandler(context),
                 new SanitizerHandler(context));
 

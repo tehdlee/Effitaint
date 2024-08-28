@@ -1,6 +1,6 @@
 - id: pta
   options:
-    cs: 1-call
+    cs: ci
     only-app: false
     implicit-entries: true
     distinguish-string-constants: reflection
@@ -15,9 +15,9 @@
     dump-ci: false
     dump-yaml: false
     expected-file: null
-    reflection-inference: solar
+    reflection-inference: string-constant
     reflection-log: null
-    taint-config: config/common/pred/pred1.yml
+    taint-config: config/common/Aliasing/aliasing1.yml
     plugins: []
     time-limit: -1
 - id: cg

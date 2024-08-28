@@ -1,10 +1,10 @@
 optionsFile: null
 printHelp: false
-classPath: []
-appClassPath:
+classPath:
 - ../../Benchmark_FlowDroid/securibench-micro/build1
 - ../../Benchmark_FlowDroid/securibench-micro/lib/j2ee.jar
-mainClass: securibench.micro.predmain
+appClassPath: []
+mainClass: securibench.micro.Aliasingmain
 inputClasses: []
 javaVersion: 8
 prependJVM: false
@@ -17,7 +17,7 @@ scope: REACHABLE
 nativeModel: true
 planFile: null
 analyses:
-  pta: cs:1-call;reflection-inference:solar;taint-config:config/common/pred/pred1.yml;
+  pta: cs:ci;taint-config:config/common/Aliasing/aliasing1.yml;
 onlyGenPlan: false
 keepResult:
 - $KEEP-ALL
