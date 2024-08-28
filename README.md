@@ -1,6 +1,6 @@
 # EffiTaint
 
-EffiTaint is a novel static taint analysis tool designed to address the limitations of existing tools such as FlowDroid and Tai-e. It offers enhanced accuracy and performance in tracking sensitive data flows in Java programs, particularly in large-scale applications. EffiTaint introduces several innovations, including efficient source chain optimization and accurate array modeling, making it a robust solution for modern software security needs.
+EffiTaint is a stand-alone open-source tool developed based on the Tai-e framework. This project is licensed under the GPL 3.0 and LGPL 3.0 licenses.EffiTaint is a novel static taint analysis tool designed to address the limitations of existing tools such as FlowDroid and Tai-e. It offers enhanced accuracy and performance in tracking sensitive data flows in Java programs, particularly in large-scale applications. EffiTaint introduces several innovations, including efficient source chain optimization and accurate array modeling, making it a robust solution for modern software security needs.
 
 ## Features
 
