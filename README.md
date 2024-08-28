@@ -14,7 +14,7 @@ EffiTaint is a novel static taint analysis tool designed to address the limitati
 
 EffiTaint introduces significant modifications to the original Tai-e project, including:
 
-- **EffitaintSolver**: Rewritten the default solver from Tai-e as EffitaintSolver and modified related plugins to ensure compatibility.
+- **EffitaintSolver**: Rewritten the 'defaultSolver' from Tai-e as 'EffitaintSolver' and modified related plugins to ensure compatibility.
 - **Taint Analysis Modules**: Rewritten the `SourceHandler` and `TransferHandler` modules, and introduced a new `TaintAnalysisHandler` module for enhanced taint tracking.
 - **Reflection Analysis**: Added reflection analysis specifically for the `Field.get()` method in the reflection plugin, improving the handling of reflective access patterns.
 
@@ -25,11 +25,11 @@ To install and set up EffiTaint:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/effitaint.git
+   git clone https://github.com/tehdlee/Effitaint.git
 2. Navigate to the project directory:
    ```bash
-   cd effitaint
-3. Build the project using your preferred build tool (e.g., Maven or Gradle).
+   cd Effitaint
+3. Build the project using your preferred build tool (Gradle).EffiTaint has been implemented in IntelliJ IDEA. The usage in IntelliJ IDEA is consistent with Tai-e. For detailed instructions on how to use EffiTaint in IntelliJ IDEA, please refer to the [Tai-e setup guide](https://tai-e.pascal-lab.net/docs/current/reference/en/setup-in-intellij-idea.html).
 ## Usage
 EffiTaint can be integrated into your Java projects to analyze taint flows. Follow these steps to use EffiTaint:
 
