@@ -1,0 +1,58 @@
+sources:
+  - { kind: call, method: "<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>", index: result }
+  - { kind: call, method: "<javax.servlet.ServletRequest: java.lang.String[] getParameterValues(java.lang.String)>", index: "result[*]" }
+  - { kind: call, method: "<javax.servlet.ServletRequest: javax.servlet.http.Cookie[] getCookies()>", index: "result[*]" }
+  - { kind: call, method: "<javax.servlet.ServletRequest: java.lang.String getHeader(java.lang.String)>", index: result }
+  - { kind: call, method: "<javax.servlet.ServletRequest: java.util.Enumeration getHeader(java.lang.String)>", index: result }
+  - { kind: call, method: "<javax.servlet.ServletRequest: java.util.Enumeration getHeaderNames()>", index: result }
+
+sinks:
+  - { method: "<java.io.PrintWriter: void println(java.lang.String)>", index: 0 }
+  - { method: "<java.io.PrintWriter: void println(java.lang.Object)>", index: 0 }
+  - { method: "<java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>", index: 0 }
+  - { method: "<java.sql.Statement: boolean execute(java.lang.String)>", index: 0 }
+  - { method: "<java.sql.Statement: int executeUpdate(java.lang.String,int[])>", index: 0 }
+  - { method: "<java.sql.Statement: int executeUpdate(java.lang.String,int)>", index: 0 }
+  - { method: "<java.sql.Statement: int executeUpdate(java.lang.String,java.lang.String[])>", index: 0 }
+  - { method: "<java.io.File: boolean createNewFile()>", index: base }
+  - { method: "<java.io.FileWriter: void <init>(java.lang.String)>", index: 0 }
+  - { method: "<java.io.FileInputStream: void <init>(java.lang.String)>", index: 0 }
+  - { method: "<javax.servlet.ServletResponse: void sendRedirect(java.lang.String)>", index: 0 }
+
+transfers:
+  - { method: "<java.lang.String: java.lang.String toUpperCase()>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String toUpperCase(java.util.Locale)>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String toLowerCase()>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String substring(int)>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.String: java.lang.String replace(java.lang.Char,java.lang.Char)>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>", from: base, to: result }
+  - { method: "<java.lang.String: char[] toCharArray()>", from: base, to: result }
+  - { method: "<java.lang.String: void <init>(char[])>", from: 0, to: base }
+  - { method: "<java.lang.String: void getChars(int,int,char[],int)>", from: base, to: 2 }
+  - { method: "<java.util.HashMap: java.lang.String get(java.lang.Object)>", from: 0, to: result }
+  - { method: "<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>", from: "1[*]", to: result }
+  - { method: "<java.lang.StringBuffer: void <init>(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer insert(int,char)>", from: base, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer insert(int,char[])>", from: base, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer insert(int,java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.String toString()>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: void <init>(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: base, to: result }
+  - { method: "<java.io.FileWriter: void <init>(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.io.FileInputStream: void <init>(java.lang.String)>", from: 0, to: base }
+sanitizers:
+  - { kind: param, method: "<securibench.micro.sanitizers.Sanitizers2: java.lang.String clean(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>", index: 0 }
+  - { kind: param, method: "<securibench.micro.sanitizers.Sanitizers4: java.lang.String clean(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<securibench.micro.sanitizers.Sanitizers6: java.lang.String clean(java.lang.String)>", index: 0 }
+
+call-site-mode: true

@@ -1,0 +1,23 @@
+optionsFile: null
+printHelp: false
+classPath: []
+appClassPath:
+- ../../Benchmark_FlowDroid/securibench-micro/build1
+- ../../Benchmark_FlowDroid/securibench-micro/lib/j2ee.jar
+mainClass: securibench.micro.predmain
+inputClasses: []
+javaVersion: 8
+prependJVM: false
+allowPhantom: true
+worldBuilderClass: pascal.taie.frontend.soot.SootWorldBuilder
+outputDir: output
+preBuildIR: false
+worldCacheMode: false
+scope: REACHABLE
+nativeModel: true
+planFile: null
+analyses:
+  pta: cs:1-call;reflection-inference:solar;taint-config:config/common/pred/pred1.yml;
+onlyGenPlan: false
+keepResult:
+- $KEEP-ALL

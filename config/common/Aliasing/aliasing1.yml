@@ -1,0 +1,28 @@
+sources:
+  - { kind: call, method: "<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>", index: result }
+  - { kind: call, method: "<javax.servlet.ServletRequest: java.lang.String[] getParameterValues(java.lang.String)>", index: "result[*]" }
+
+sinks:
+  - { method: "<java.io.PrintWriter: void println(java.lang.String)>", index: 0 }
+  - { method: "<java.io.PrintWriter: void println(java.lang.Object)>", index: 0 }
+
+transfers:
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.String: char[] toCharArray()>", from: base, to: result }
+  - { method: "<java.lang.String: void <init>(char[])>", from: 0, to: base }
+  - { method: "<java.lang.String: void getChars(int,int,char[],int)>", from: base, to: 2 }
+  - { method: "<java.util.HashMap: java.lang.String get(java.lang.Object)>", from: 0, to: result }
+  - { method: "<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>", from: "1[*]", to: result }
+  - { method: "<java.lang.StringBuffer: void <init>(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.String toString()>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: void <init>(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: base, to: result }
+
+call-site-mode: true

@@ -1,0 +1,41 @@
+optionsFile: null
+printHelp: false
+classPath: []
+#  - /home/haocheng/Z_personal/Research/projects/Benchmark_FlowDroid/securibench-micro/classes
+#  - /home/haocheng/Z_personal/Research/projects/Benchmark_FlowDroid/securibench-micro/lib/j2ee.jar
+  #  - ./java-benchmarks/java-sec-code/spring-web-6.1.4.jar
+#  - /home/haocheng/Z_personal/Research/projects/Benchmark_FlowDroid/securibench-micro/src/securibench/micro/aliasing
+#  - ./java-benchmarks/java-sec-code/mysql-connector-java-8.0.12.jar
+#appClassPath: java-benchmarks/java-sec-code/target/classes
+appClassPath:
+  - /home/haocheng/Z_personal/Research/projects/Benchmark_FlowDroid/securibench-micro/build1
+  - /home/haocheng/Z_personal/Research/projects/Benchmark_FlowDroid/securibench-micro/lib/j2ee.jar
+#  - ./java-benchmarks/java-sec-code-4/target/classes
+#  - /home/haocheng/Z_personal/Research/projects/Benchmark_FlowDroid/favorites-web/favorites-web-1.0.0/BOOT-INF/classes
+
+#  - ./java-benchmarks/java-sec-code-new/java-sec-code/target/classes
+#  - ./java-benchmarks/java-sec-code-new/java-sec-code/demo/target/classes
+#mainClass: org.joychou.Application
+mainClass: securibench.micro.DSMain
+inputClasses: []
+javaVersion: 8
+prependJVM: false
+allowPhantom: true
+worldBuilderClass: pascal.taie.frontend.soot.SootWorldBuilder
+outputDir: output
+preBuildIR: false
+worldCacheMode: false
+scope: REACHABLE
+nativeModel: true
+planFile: null
+analyses:
+  #  ir-dumper: ;
+  #  pta: cs:ci;implicit-entries:true;merge-string-constants:null;reflection-inference:solar;merge-string-objects:false;merge-string-builders:false;merge-exception-objects:false;taint-config:config/common/taint-config.yml;
+  #  pta: cs:ci;taint-config:config/common/taint-config.yml;
+  #  pta: cs:ci;plugins:[pascal.taie.analysis.pta.plugin.taint.SpringBootHandler,pascal.taie.analysis.pta.plugin.taint.DependencyInjectionHandler];implicit-entries:true;distinguish-string-constants:null;reflection-inference:solar;merge-string-objects:false;merge-string-builders:false;merge-exception-objects:false;taint-config:taint-config.yml;
+  #  pta: cs:ci;plugins:[pascal.taie.analysis.pta.plugin.taint.SpringBootHandler,pascal.taie.analysis.pta.plugin.taint.DependencyInjectionHandler];implicit-entries:true;distinguish-string-constants:null;merge-string-objects:false;merge-string-builders:false;merge-exception-objects:false;taint-config:config/common/taint-config.yml;
+  #  pta: cs:ci;taint-config:config/common/taint-config.yml;
+  pta: cs:1-call;taint-config:config/common/DS/ds1.yml;
+onlyGenPlan: false
+keepResult:
+  - $KEEP-ALL

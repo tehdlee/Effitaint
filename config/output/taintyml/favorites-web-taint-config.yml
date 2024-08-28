@@ -1,0 +1,539 @@
+sources:
+  - { kind: param, method: "<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<synthetic.method.HttpServletRequestImpl: java.lang.String getParameter(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<synthetic.method.HttpServletRequestImpl: java.lang.String getHeader(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<synthetic.method.HttpServletRequestImpl: java.lang.Object getAttribute(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.springframework.security.crypto.password.PasswordEncoder: java.lang.String encode(java.lang.CharSequence)>", index: 0 }
+  - { kind: param, method: "<org.springframework.security.config.authentication.CachingUserDetailsService: org.springframework.security.core.userdetails.UserDetails loadUserByUsername(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper: org.springframework.security.core.userdetails.UserDetails loadUserDetails(org.springframework.security.core.Authentication)>", index: 0 }
+  - { kind: param, method: "<org.apache.commons.jxpath.ri.parser.XPathParser: java.lang.String unescape(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.apache.xmlrpc.webserver.HttpServletRequestImpl: java.lang.String getRealPath(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.springframework.web.servlet.tags.UrlTag: java.lang.String createQueryString(java.util.List,java.util.Set,boolean)>", index: 0 }
+  - { kind: param, method: "<org.springframework.web.servlet.tags.UrlTag: java.lang.String createQueryString(java.util.List,java.util.Set,boolean)>", index: 1 }
+  - { kind: param, method: "<org.springframework.web.servlet.tags.UrlTag: java.lang.String createQueryString(java.util.List,java.util.Set,boolean)>", index: 2 }
+  - { kind: param, method: "<org.springframework.messaging.simp.stomp.StompDecoder: java.lang.String unescape(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.apache.commons.jxpath.ri.JXPathContextReferenceImpl: java.lang.Object getValue(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<com.google.auth.oauth2.DefaultCredentialsProvider: com.google.auth.oauth2.GoogleCredentials getDefaultCredentials(com.google.api.client.http.HttpTransport)>", index: 0 }
+  - { kind: param, method: "<org.jsoup.nodes.Entities: java.lang.String unescape(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.springframework.util.DefaultPropertiesPersister: java.lang.String unescape(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.owasp.webgoat.plugins.Plugin: void loadFiles(java.nio.file.Path)>", index: 0 }
+  - { kind: param, method: "<org.apache.xmlrpc.webserver.HttpServletResponseImpl: java.lang.String getHeader(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<com.google.auth.oauth2.UserAuthorizer: com.google.auth.oauth2.UserCredentials getCredentialsFromCode(java.lang.String,java.net.URI)>", index: 0 }
+  - { kind: param, method: "<com.google.auth.oauth2.UserAuthorizer: com.google.auth.oauth2.UserCredentials getCredentialsFromCode(java.lang.String,java.net.URI)>", index: 1 }
+  - { kind: param, method: "<org.owasp.webgoat.util.HtmlEncoder: java.lang.String decode(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<javax.naming.ldap.Rdn: java.lang.Object unescapeValue(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.apache.xmlrpc.webserver.XmlRpcServletServer: org.apache.xmlrpc.common.XmlRpcHttpRequestConfigImpl getConfig(javax.servlet.http.HttpServletRequest)>", index: 0 }
+  - { kind: param, method: "<org.apache.xmlrpc.webserver.HttpServletRequestImpl: void parsePostData(java.util.Map,java.io.InputStream,java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.apache.xmlrpc.webserver.HttpServletRequestImpl: void parsePostData(java.util.Map,java.io.InputStream,java.lang.String)>", index: 1 }
+  - { kind: param, method: "<org.apache.xmlrpc.webserver.HttpServletRequestImpl: void parsePostData(java.util.Map,java.io.InputStream,java.lang.String)>", index: 2 }
+  - { kind: param, method: "<org.springframework.web.util.UrlPathHelper: java.lang.String decodeRequestString(javax.servlet.http.HttpServletRequest,java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.springframework.web.util.UrlPathHelper: java.lang.String decodeRequestString(javax.servlet.http.HttpServletRequest,java.lang.String)>", index: 1 }
+  - { kind: param, method: "<org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder: org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder requestAttr(java.lang.String,java.lang.Object)>", index: 0 }
+  - { kind: param, method: "<org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder: org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder requestAttr(java.lang.String,java.lang.Object)>", index: 1 }
+  - { kind: param, method: "<com.google.auth.oauth2.UserAuthorizer: com.google.auth.oauth2.UserCredentials getCredentials(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.springframework.web.socket.sockjs.transport.handler.JsonpReceivingTransportHandler: java.lang.String[] readMessages(org.springframework.http.server.ServerHttpRequest)>", index: 0 }
+  - { kind: param, method: "<com.google.auth.oauth2.DefaultCredentialsProvider: com.google.auth.oauth2.GoogleCredentials getDefaultCredentialsUnsynchronized(com.google.api.client.http.HttpTransport)>", index: 0 }
+  - { kind: param, method: "<org.apache.xmlrpc.webserver.HttpServletRequestImpl: java.lang.String readLine(byte[])>", index: 0 }
+  - { kind: param, method: "<org.springframework.security.config.http.LogoutBeanDefinitionParser: org.springframework.beans.factory.config.BeanDefinition getLogoutRequestMatcher(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<com.novell.ldap.rfc2251.RfcFilter: byte[] unescapeString(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.springframework.web.socket.config.HandlersBeanDefinitionParser: org.springframework.beans.factory.config.BeanDefinition parse(org.w3c.dom.Element,org.springframework.beans.factory.xml.ParserContext)>", index: 0 }
+  - { kind: param, method: "<org.springframework.web.socket.config.HandlersBeanDefinitionParser: org.springframework.beans.factory.config.BeanDefinition parse(org.w3c.dom.Element,org.springframework.beans.factory.xml.ParserContext)>", index: 1 }
+  - { kind: param, method: "<org.jsoup.parser.Parser: org.jsoup.nodes.Document parse(java.lang.String,java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.jsoup.parser.Parser: org.jsoup.nodes.Document parse(java.lang.String,java.lang.String)>", index: 1 }
+  - { kind: param, method: "<javax.servlet.ServletRequestWrapper: java.lang.String getParameter(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)>", index: 0 }
+  - { kind: param, method: "%<org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)>", index: 0 }
+  - { kind: param, method: "%<org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity,java.lang.String)>", index: 0 }
+  - { kind: param, method: "%<org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity,java.lang.String)>", index: 1 }
+  - { kind: param, method: "%<org.apache.http.util.EntityUtils: byte[] toByteArray(org.apache.http.HttpEntity)>", index: 0 }
+  - { kind: param, method: "%<org.apache.http.util.EntityUtils: java.lang.String getContentCharSet(org.apache.http.HttpEntity)>", index: 0 }
+  - { kind: param, method: "%<com.huawei.modelcontroller.ModelOneController: void getDataFromSerialization(com.huawei.bean.TokenBeanWeb)>", index: 0 }
+  - { kind: param, method: "<redis.clients.jedis.Jedis: java.lang.String set(java.lang.String,java.lang.String,redis.clients.jedis.params.SetParams)>", index: 0 }
+  - { kind: param, method: "<redis.clients.jedis.Jedis: java.lang.String set(java.lang.String,java.lang.String,redis.clients.jedis.params.SetParams)>", index: 1 }
+  - { kind: param, method: "<redis.clients.jedis.Jedis: java.lang.String set(java.lang.String,java.lang.String,redis.clients.jedis.params.SetParams)>", index: 2 }
+  - { kind: param, method: "<com.alibaba.fastjson.JSONObject: java.lang.String toJSONString(java.lang.Object)>", index: 0 }
+  - { kind: param, method: "<com.favorites.domain.User: void setPassWord(java.lang.String)>", index: 0 }
+  - { kind: param, method: "<org.apache.commons.lang3.builder.ToStringBuilder: java.lang.String reflectionToString(java.lang.Object)>", index: 0 }
+sinks:
+  - { vuln: "any", level: 4, method: "<javax.persistence.EntityManager: javax.persistence.TypedQuery createQuery(java.lang.String,java.lang.Class)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<javax.persistence.EntityManager: javax.persistence.TypedQuery createQuery(java.lang.String,java.lang.Class)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<javax.servlet.http.HttpServletResponse: void sendRedirect(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<javax.servlet.ServletOutputStream: void write(byte[],int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<javax.servlet.ServletOutputStream: void write(byte[],int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<javax.servlet.ServletOutputStream: void write(byte[],int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintStream: void println(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintStream: void println(java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(java.lang.String,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(java.lang.String,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.shiro.cache.Cache: java.lang.Object put(java.lang.Object,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.shiro.cache.Cache: java.lang.Object put(java.lang.Object,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<net.sf.ehcache.Cache: void put(net.sf.ehcache.Element)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.tools.zip.ZipOutputStream: void write(byte[],int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.tools.zip.ZipOutputStream: void write(byte[],int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.tools.zip.ZipOutputStream: void write(byte[],int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.apache.tools.zip.ZipOutputStream: void putNextEntry(org.apache.tools.zip.ZipEntry)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(java.lang.String,java.lang.Object[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(java.lang.String,java.lang.Object[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<redis.clients.jedis.Jedis: java.lang.String set(byte[],byte[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<redis.clients.jedis.Jedis: java.lang.String set(byte[],byte[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<redis.clients.jedis.Jedis: java.lang.Long rpush(java.lang.String,java.lang.String[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<redis.clients.jedis.Jedis: java.lang.Long rpush(java.lang.String,java.lang.String[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<redis.clients.jedis.Jedis: java.lang.Long sadd(java.lang.String,java.lang.String[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<redis.clients.jedis.Jedis: java.lang.Long sadd(java.lang.String,java.lang.String[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<redis.clients.jedis.Jedis: java.util.Map hgetAll(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<redis.clients.jedis.Jedis: java.lang.String hmset(java.lang.String,java.util.Map)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<redis.clients.jedis.Jedis: java.lang.String hmset(java.lang.String,java.util.Map)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.mail.HtmlEmail: void setAuthentication(java.lang.String,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.mail.HtmlEmail: void setAuthentication(java.lang.String,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.ByteArrayOutputStream: void write(byte[],int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ByteArrayOutputStream: void write(byte[],int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.ByteArrayOutputStream: void write(byte[],int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<com.fasterxml.jackson.databind.ObjectMapper: java.lang.String writeValueAsString(java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<redis.clients.jedis.Jedis: java.lang.String set(java.lang.String,java.lang.String,redis.clients.jedis.params.SetParams)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<redis.clients.jedis.Jedis: java.lang.String set(java.lang.String,java.lang.String,redis.clients.jedis.params.SetParams)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<redis.clients.jedis.Jedis: java.lang.String set(java.lang.String,java.lang.String,redis.clients.jedis.params.SetParams)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.apache.xalan.xsltc.runtime.BasisLibrary: java.lang.String replace(java.lang.String,java.lang.String,java.lang.String[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xalan.xsltc.runtime.BasisLibrary: java.lang.String replace(java.lang.String,java.lang.String,java.lang.String[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.xalan.xsltc.runtime.BasisLibrary: java.lang.String replace(java.lang.String,java.lang.String,java.lang.String[])>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.springframework.mock.web.portlet.MockPortletRequest: void setParameters(java.util.Map)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.axis2.description.AxisService: void printWSDLError(java.io.OutputStream)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.mock.web.portlet.MockPortletRequest: void setParameter(java.lang.String,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.mock.web.portlet.MockPortletRequest: void setParameter(java.lang.String,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.lang3.text.StrSubstitutor: java.lang.String replace(char[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.webserver.XmlRpcServletServer: void setResponseHeader(org.apache.xmlrpc.common.ServerStreamConnection,java.lang.String,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.webserver.XmlRpcServletServer: void setResponseHeader(org.apache.xmlrpc.common.ServerStreamConnection,java.lang.String,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.webserver.XmlRpcServletServer: void setResponseHeader(org.apache.xmlrpc.common.ServerStreamConnection,java.lang.String,java.lang.String)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<net.sourceforge.pebble.domain.Comment: void setAuthenticated(boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.springframework.web.socket.server.support.WebSocketHttpRequestHandler: void handleRequest(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.web.socket.server.support.WebSocketHttpRequestHandler: void handleRequest(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.server.ReflectiveXmlRpcHandler: java.lang.Object execute(org.apache.xmlrpc.XmlRpcRequest)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.mysql.jdbc.Statement: java.sql.ResultSet executeQuery(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.test.context.transaction.TransactionalTestExecutionListener: void runAfterTransactionMethods(org.springframework.test.context.TestContext)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.stratos.cli.StratosApplication: int run(java.lang.String[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.owasp.webgoat.session.ParameterParser: void update(javax.servlet.ServletRequest)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.lang3.text.StrSubstitutor: java.lang.String replace(java.lang.CharSequence)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.webserver.XmlRpcServletServer: void execute(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.webserver.XmlRpcServletServer: void execute(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.webserver.ServletOutputStreamImpl: void write(byte[],int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.webserver.ServletOutputStreamImpl: void write(byte[],int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.webserver.ServletOutputStreamImpl: void write(byte[],int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.webserver.ConnectionServer: void writeResponse(org.apache.xmlrpc.common.XmlRpcStreamRequestConfig,java.io.OutputStream,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.webserver.ConnectionServer: void writeResponse(org.apache.xmlrpc.common.XmlRpcStreamRequestConfig,java.io.OutputStream,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.webserver.ConnectionServer: void writeResponse(org.apache.xmlrpc.common.XmlRpcStreamRequestConfig,java.io.OutputStream,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.webserver.Connection: void writeResponseHeader(org.apache.xmlrpc.webserver.RequestData,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.webserver.Connection: void writeResponseHeader(org.apache.xmlrpc.webserver.RequestData,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.bcel.util.JavaWrapper: void runMain(java.lang.String,java.lang.String[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.bcel.util.JavaWrapper: void runMain(java.lang.String,java.lang.String[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.springframework.format.datetime.joda.PeriodFormatter: java.lang.Object parse(java.lang.String,java.util.Locale)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.format.datetime.joda.PeriodFormatter: java.lang.Object parse(java.lang.String,java.util.Locale)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.xerces.impl.xs.models.XSDFACM: void dumpTree(org.apache.xerces.impl.dtd.models.CMNode,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xerces.impl.xs.models.XSDFACM: void dumpTree(org.apache.xerces.impl.dtd.models.CMNode,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.springframework.jdbc.core.JdbcTemplate: java.lang.Object query(java.lang.String,org.springframework.jdbc.core.ResultSetExtractor)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.jdbc.core.JdbcTemplate: java.lang.Object query(java.lang.String,org.springframework.jdbc.core.ResultSetExtractor)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.owasp.webgoat.session.DatabaseUtilities: java.sql.Connection getHsqldbConnection(java.lang.String,org.owasp.webgoat.session.WebgoatContext)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.owasp.webgoat.session.DatabaseUtilities: java.sql.Connection getHsqldbConnection(java.lang.String,org.owasp.webgoat.session.WebgoatContext)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.springframework.jdbc.core.JdbcTemplate: void execute(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.mock.web.MockBodyContent: void println(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.owasp.webgoat.HammerHead: void log(javax.servlet.http.HttpServletRequest,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.owasp.webgoat.HammerHead: void log(javax.servlet.http.HttpServletRequest,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.server.XmlRpcServerWorker: java.lang.Object execute(org.apache.xmlrpc.XmlRpcRequest)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.owasp.webgoat.session.LessonSession: void setAuthenticated(boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.owasp.webgoat.session.WebSession: void update(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.owasp.webgoat.session.WebSession: void update(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.owasp.webgoat.session.WebSession: void update(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.hibernate.validator.internal.util.ConcurrentReferenceHashMap: boolean replace(java.lang.Object,java.lang.Object,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.hibernate.validator.internal.util.ConcurrentReferenceHashMap: boolean replace(java.lang.Object,java.lang.Object,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.hibernate.validator.internal.util.ConcurrentReferenceHashMap: boolean replace(java.lang.Object,java.lang.Object,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.webserver.WebServer: void setParanoid(boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.novell.ldap.rfc2251.RfcFilter: void addSubstring(int,byte[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.novell.ldap.rfc2251.RfcFilter: void addSubstring(int,byte[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession: void handleMessage(org.springframework.web.socket.TextMessage,org.springframework.web.socket.WebSocketSession)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession: void handleMessage(org.springframework.web.socket.TextMessage,org.springframework.web.socket.WebSocketSession)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.xmldb.api.base.XMLDBException: void printStackTrace(java.io.PrintWriter)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.web.socket.adapter.standard.StandardWebSocketSession: void sendTextMessage(org.springframework.web.socket.TextMessage)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xerces.impl.xpath.regex.REUtil: void dumpString(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xalan.xsltc.compiler.util.Util: java.lang.String replace(java.lang.String,java.lang.String,java.lang.String[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xalan.xsltc.compiler.util.Util: java.lang.String replace(java.lang.String,java.lang.String,java.lang.String[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.xalan.xsltc.compiler.util.Util: java.lang.String replace(java.lang.String,java.lang.String,java.lang.String[])>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.apache.http.impl.conn.DefaultClientConnection: void sendRequestHeader(org.apache.http.HttpRequest)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.validator.util.ValidatorUtils: java.lang.String replace(java.lang.String,java.lang.String,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.validator.util.ValidatorUtils: java.lang.String replace(java.lang.String,java.lang.String,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.validator.util.ValidatorUtils: java.lang.String replace(java.lang.String,java.lang.String,java.lang.String)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<com.google.json.JsonSanitizer: void replace(int,int,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.google.json.JsonSanitizer: void replace(int,int,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<com.google.json.JsonSanitizer: void replace(int,int,java.lang.String)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.owasp.esapi.reference.validation.StringValidationRule: void addBlacklistPattern(java.util.regex.Pattern)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.lang3.text.StrSubstitutor: java.lang.String replace(java.lang.CharSequence,int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.lang3.text.StrSubstitutor: java.lang.String replace(java.lang.CharSequence,int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.lang3.text.StrSubstitutor: java.lang.String replace(java.lang.CharSequence,int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.springframework.security.util.FieldUtils: void setProtectedFieldValue(java.lang.String,java.lang.Object,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.security.util.FieldUtils: void setProtectedFieldValue(java.lang.String,java.lang.Object,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.springframework.security.util.FieldUtils: void setProtectedFieldValue(java.lang.String,java.lang.Object,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.springframework.mock.web.MockBodyContent: void println(char[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.test.context.junit4.SpringJUnit4ClassRunner: void runChild(org.junit.runners.model.FrameworkMethod,org.junit.runner.notification.RunNotifier)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.test.context.junit4.SpringJUnit4ClassRunner: void runChild(org.junit.runners.model.FrameworkMethod,org.junit.runner.notification.RunNotifier)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.springframework.web.socket.handler.ConcurrentWebSocketSessionDecorator: void sendMessage(org.springframework.web.socket.WebSocketMessage)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.orm.hibernate3.TypeDefinitionBean: void setParameters(java.util.Properties)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.format.datetime.joda.DateTimeParser: org.joda.time.DateTime parse(java.lang.String,java.util.Locale)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.format.datetime.joda.DateTimeParser: org.joda.time.DateTime parse(java.lang.String,java.util.Locale)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.io.HexDump: void dump(byte[],long,java.io.OutputStream,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.io.HexDump: void dump(byte[],long,java.io.OutputStream,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.io.HexDump: void dump(byte[],long,java.io.OutputStream,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.io.HexDump: void dump(byte[],long,java.io.OutputStream,int)>", index: 3 }
+  - { vuln: "any", level: 4, method: "<org.springframework.mock.web.MockJspWriter: void println(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xalan.templates.ElemTemplateElement: org.w3c.dom.Node replaceChild(org.w3c.dom.Node,org.w3c.dom.Node)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xalan.templates.ElemTemplateElement: org.w3c.dom.Node replaceChild(org.w3c.dom.Node,org.w3c.dom.Node)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.springframework.web.socket.config.HandlersBeanDefinitionParser: org.springframework.beans.factory.config.BeanDefinition parse(org.w3c.dom.Element,org.springframework.beans.factory.xml.ParserContext)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.web.socket.config.HandlersBeanDefinitionParser: org.springframework.beans.factory.config.BeanDefinition parse(org.w3c.dom.Element,org.springframework.beans.factory.xml.ParserContext)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<com.github.scribejava.core.oauth.OAuth20Service: com.github.scribejava.core.model.OAuth2AccessToken sendAccessTokenRequestSync(com.github.scribejava.core.model.OAuthRequest)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.github.scribejava.core.oauth.OAuth20Service: java.util.concurrent.Future sendAccessTokenRequestAsync(com.github.scribejava.core.model.OAuthRequestAsync,com.github.scribejava.core.model.OAuthAsyncRequestCallback)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.github.scribejava.core.oauth.OAuth20Service: java.util.concurrent.Future sendAccessTokenRequestAsync(com.github.scribejava.core.model.OAuthRequestAsync,com.github.scribejava.core.model.OAuthAsyncRequestCallback)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.client.XmlRpcClient: java.lang.Object execute(java.lang.String,java.lang.Object[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xmlrpc.client.XmlRpcClient: java.lang.Object execute(java.lang.String,java.lang.Object[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.xpath.jaxp.XPathImpl: javax.xml.xpath.XPathExpression compile(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.jsoup.parser.Parser: org.jsoup.nodes.Document parse(java.lang.String,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.jsoup.parser.Parser: org.jsoup.nodes.Document parse(java.lang.String,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.jsoup.nodes.Node: org.jsoup.nodes.Node before(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.jsoup.nodes.Node: org.jsoup.nodes.Node after(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<javax.servlet.http.HttpServletResponseWrapper: void sendRedirect(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)>", index: 3 }
+  - { vuln: "any", level: 4, method: "<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)>", index: 4 }
+  - { vuln: "any", level: 4, method: "<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 3 }
+  - { vuln: "any", level: 4, method: "<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 4 }
+  - { vuln: "any", level: 4, method: "<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 5 }
+  - { vuln: "any", level: 4, method: "<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 6 }
+  - { vuln: "any", level: 4, method: "<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 7 }
+  - { vuln: "any", level: 4, method: "<java.io.OutputStream: void write(byte[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.OutputStream: void write(byte[],int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.OutputStream: void write(byte[],int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.OutputStream: void write(byte[],int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.OutputStream: void write(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.FileOutputStream: void write(byte[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.FileOutputStream: void write(byte[],int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.FileOutputStream: void write(byte[],int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.FileOutputStream: void write(byte[],int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.FileOutputStream: void write(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(char[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(char[],int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(char[],int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(char[],int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(java.lang.String,int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(java.lang.String,int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(java.lang.String,int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: java.io.Writer append(java.lang.CharSequence)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.OutputStreamWriter: java.io.Writer append(java.lang.CharSequence)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.net.Socket: void connect(java.net.SocketAddress)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeObject(java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintWriter: void println(boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintWriter: void println(char)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintWriter: void println(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintWriter: void println(long)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintWriter: void println(float)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintWriter: void println(double)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintWriter: void println(char[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintWriter: void println(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintWriter: void println(java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.alibaba.excel.write.builder.ExcelWriterSheetBuilder: void doWrite(java.util.List)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.baomidou.mybatisplus.extension.service.IService: boolean save(java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.baomidou.mybatisplus.extension.service.IService: boolean saveBatch(java.util.Collection)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.baomidou.mybatisplus.extension.service.IService: boolean saveBatch(java.util.Collection,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.baomidou.mybatisplus.extension.service.IService: boolean saveBatch(java.util.Collection,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<com.baomidou.mybatisplus.extension.service.IService: boolean saveOrUpdateBatch(java.util.Collection)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.baomidou.mybatisplus.extension.service.IService: boolean saveOrUpdateBatch(java.util.Collection,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.baomidou.mybatisplus.extension.service.IService: boolean saveOrUpdateBatch(java.util.Collection,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<com.baomidou.mybatisplus.extension.service.IService: boolean saveOrUpdate(java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.baomidou.mybatisplus.extension.service.IService: boolean saveOrUpdate(java.lang.Object,com.baomidou.mybatisplus.core.conditions.Wrapper)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<com.baomidou.mybatisplus.extension.service.IService: boolean saveOrUpdate(java.lang.Object,com.baomidou.mybatisplus.core.conditions.Wrapper)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintWriter: java.io.PrintWriter printf(java.lang.String,java.lang.Object[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintWriter: java.io.PrintWriter printf(java.lang.String,java.lang.Object[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintWriter: java.io.PrintWriter printf(java.util.Locale,java.lang.String,java.lang.Object[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintWriter: java.io.PrintWriter printf(java.util.Locale,java.lang.String,java.lang.Object[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintWriter: java.io.PrintWriter printf(java.util.Locale,java.lang.String,java.lang.Object[])>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void write(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void write0(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeBytes(byte[],int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeBytes(byte[],int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeBytes(byte[],int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void write(byte[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void write(byte[],int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void write(byte[],int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void write(byte[],int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeBoolean(boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeByte(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeShort(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeChar(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeInt(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeLong(long)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeFloat(float)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeDouble(double)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeBytes(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeChars(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeUTF(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.RandomAccessFile: void writeUTF(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.poi.hssf.usermodel.HSSFCell: void setCellValueImpl(double)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.poi.hssf.usermodel.HSSFCell: void setCellValueImpl(java.util.Date)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.poi.hssf.usermodel.HSSFCell: void setCellValueImpl(java.time.LocalDateTime)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.poi.hssf.usermodel.HSSFCell: void setCellValueImpl(java.util.Calendar)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.poi.hssf.usermodel.HSSFCell: void setCellValueImpl(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.poi.hssf.usermodel.HSSFCell: void setCellValueImpl(org.apache.poi.ss.usermodel.RichTextString)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.poi.hssf.usermodel.HSSFCell: void setCellValue(boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(char[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(java.lang.String,int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(java.lang.String,int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(java.lang.String,int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(char[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.Writer: void write(char[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.BufferedWriter: void write(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.BufferedWriter: void write(char[],int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.BufferedWriter: void write(char[],int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.BufferedWriter: void write(char[],int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.BufferedWriter: void write(java.lang.String,int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.BufferedWriter: void write(java.lang.String,int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.BufferedWriter: void write(java.lang.String,int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.OutputStreamWriter: void write(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.OutputStreamWriter: void write(char[],int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.OutputStreamWriter: void write(char[],int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.OutputStreamWriter: void write(char[],int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.OutputStreamWriter: void write(java.lang.String,int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.OutputStreamWriter: void write(java.lang.String,int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.OutputStreamWriter: void write(java.lang.String,int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.FileOutputStream: void write(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.FileOutputStream: void write(byte[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.FileOutputStream: void write(byte[],int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.FileOutputStream: void write(byte[],int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.FileOutputStream: void write(byte[],int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void write(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void write(byte[],int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void write(byte[],int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void write(byte[],int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void writeBoolean(boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void writeByte(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void writeShort(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void writeChar(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void writeInt(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void writeLong(long)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void writeFloat(float)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void writeDouble(double)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void writeBytes(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void writeChars(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void writeUTF(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: int writeUTF(java.lang.String,java.io.DataOutput)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: int writeUTF(java.lang.String,java.io.DataOutput)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.DataOutputStream: void writeBytes(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeUnshared(java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeClassDescriptor(java.io.ObjectStreamClass)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void write(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void write(byte[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void write(byte[],int,int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void write(byte[],int,int)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void write(byte[],int,int)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeBoolean(boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeByte(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeShort(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeChar(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeInt(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeLong(long)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeFloat(float)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeDouble(double)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeBytes(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeChars(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeUTF(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeTypeString(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeHandle(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeClass(java.lang.Class,boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeClass(java.lang.Class,boolean)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeClassDesc(java.io.ObjectStreamClass,boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeClassDesc(java.io.ObjectStreamClass,boolean)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeProxyDesc(java.io.ObjectStreamClass,boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeProxyDesc(java.io.ObjectStreamClass,boolean)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeNonProxyDesc(java.io.ObjectStreamClass,boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeNonProxyDesc(java.io.ObjectStreamClass,boolean)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeString(java.lang.String,boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeString(java.lang.String,boolean)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeArray(java.lang.Object,java.io.ObjectStreamClass,boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeArray(java.lang.Object,java.io.ObjectStreamClass,boolean)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeArray(java.lang.Object,java.io.ObjectStreamClass,boolean)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeEnum(java.lang.Enum,java.io.ObjectStreamClass,boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeEnum(java.lang.Enum,java.io.ObjectStreamClass,boolean)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeEnum(java.lang.Enum,java.io.ObjectStreamClass,boolean)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeOrdinaryObject(java.lang.Object,java.io.ObjectStreamClass,boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeOrdinaryObject(java.lang.Object,java.io.ObjectStreamClass,boolean)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeOrdinaryObject(java.lang.Object,java.io.ObjectStreamClass,boolean)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeExternalData(java.io.Externalizable)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeSerialData(java.lang.Object,java.io.ObjectStreamClass)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeSerialData(java.lang.Object,java.io.ObjectStreamClass)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeFatalException(java.io.IOException)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeObject(java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeObjectOverride(java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeObject0(java.lang.Object,boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeObject0(java.lang.Object,boolean)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void defaultWriteFields(java.lang.Object,java.io.ObjectStreamClass)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void defaultWriteFields(java.lang.Object,java.io.ObjectStreamClass)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeObject(java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeObjectOverride(java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeObject0(java.lang.Object,boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.ObjectOutputStream: void writeObject0(java.lang.Object,boolean)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(java.lang.String,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(java.lang.String,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(java.lang.String,java.lang.Object,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(java.lang.String,java.lang.Object,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(java.lang.String,java.lang.Object,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(java.lang.String,java.lang.Object[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(java.lang.String,java.lang.Object[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(java.lang.String,java.lang.Throwable)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(java.lang.String,java.lang.Throwable)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 3 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String,java.lang.Object[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String,java.lang.Object[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String,java.lang.Object[])>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String,java.lang.Throwable)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String,java.lang.Throwable)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void info(org.slf4j.Marker,java.lang.String,java.lang.Throwable)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String,java.lang.Object,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String,java.lang.Object,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String,java.lang.Object,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String,java.lang.Object[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String,java.lang.Object[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String,java.lang.Throwable)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String,java.lang.Throwable)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 3 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String,java.lang.Object[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String,java.lang.Object[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String,java.lang.Object[])>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String,java.lang.Throwable)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String,java.lang.Throwable)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(org.slf4j.Marker,java.lang.String,java.lang.Throwable)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(java.lang.String,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(java.lang.String,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(java.lang.String,java.lang.Object,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(java.lang.String,java.lang.Object,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(java.lang.String,java.lang.Object,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(java.lang.String,java.lang.Object[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(java.lang.String,java.lang.Object[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(java.lang.String,java.lang.Throwable)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(java.lang.String,java.lang.Throwable)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 3 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String,java.lang.Object[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String,java.lang.Object[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String,java.lang.Object[])>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String,java.lang.Throwable)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String,java.lang.Throwable)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void warn(org.slf4j.Marker,java.lang.String,java.lang.Throwable)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(java.lang.String,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(java.lang.String,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(java.lang.String,java.lang.Object,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(java.lang.String,java.lang.Object,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(java.lang.String,java.lang.Object,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(java.lang.String,java.lang.Object[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(java.lang.String,java.lang.Object[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(java.lang.String,java.lang.Throwable)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(java.lang.String,java.lang.Throwable)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String,java.lang.Object,java.lang.Object)>", index: 3 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String,java.lang.Object[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String,java.lang.Object[])>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String,java.lang.Object[])>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String,java.lang.Throwable)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String,java.lang.Throwable)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void error(org.slf4j.Marker,java.lang.String,java.lang.Throwable)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintStream: void println(boolean)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintStream: void println(char)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintStream: void println(int)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintStream: void println(long)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintStream: void println(float)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintStream: void println(double)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintStream: void println(char[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintStream: void println(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<java.io.PrintStream: void println(java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.mail.javamail.JavaMailSenderImpl: void setPassword(java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 2 }
+  - { vuln: "any", level: 4, method: "<org.slf4j.Logger: void debug(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 3 }
+  - { vuln: "any", level: 4, method: "<com.fasterxml.jackson.databind.ObjectMapper: String writeValueAsString(java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.web.servlet.mvc.support.RedirectAttributes: org.springframework.web.servlet.mvc.support.RedirectAttributes addFlashAttribute(java.lang.String,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.web.servlet.mvc.support.RedirectAttributes: org.springframework.web.servlet.mvc.support.RedirectAttributes addFlashAttribute(java.lang.String,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<org.springframework.web.servlet.mvc.support.RedirectAttributes: org.springframework.web.servlet.mvc.support.RedirectAttributes addFlashAttribute(java.lang.String,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.springframework.web.servlet.mvc.support.RedirectAttributes: org.springframework.web.servlet.mvc.support.RedirectAttributes addFlashAttribute(java.lang.String,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>", index: 1 }
+  - { vuln: "any", level: 4, method: "<com.alibaba.fastjson.JSONObject: java.lang.String toJSONString(java.lang.Object)>", index: 0 }
+  - { vuln: "any", level: 4, method: "%<com.favorites.comm.aop.LoggerAdvice: java.lang.String parseParames(java.lang.Object[])>", index: 0 }
+  - { vuln: "any", level: 4, method: "<org.apache.commons.lang3.builder.ToStringBuilder: java.lang.String reflectionToString(java.lang.Object)>", index: 0 }
+transfers:
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.String: char[] toCharArray()>", from: base, to: result }
+  - { method: "<java.lang.String: void <init>(char[])>", from: 0, to: base }
+  - { method: "<java.lang.String: void getChars(int,int,char[],int)>", from: base, to: 2 }
+  - { method: "<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>", from: "1[*]", to: result }
+  - { method: "<java.lang.StringBuffer: void <init>(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.String toString()>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: void <init>(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: base, to: result }
+
+call-site-mode: true
+

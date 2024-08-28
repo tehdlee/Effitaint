@@ -1,0 +1,5 @@
+org/joychou/service/HttpService.class
+org/joychou/config/HttpServiceConfig.class
+org/joychou/Application.class
+org/joychou/config/CustomClientHttpRequestFactory.class
+org/joychou/impl/HttpServiceImpl.class

@@ -1,0 +1,85 @@
+# macOS hidden file
+.DS_Store
+.gradle/
+.idea/
+bin/
+build/
+cache/
+out/
+# output/
+# Gradle-specific files
+
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDEA and other IDEs
+*.iml
+*.ipr
+*.iws
+
+# Eclipse-specific files
+.classpath
+.project
+.settings/
+
+# MacOS-specific files
+
+# Windows-specific files
+Thumbs.db
+desktop.ini
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Generated files
+tmp/
+*.class
+
+# Dependency directories
+lib/
+libs/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Ignore build output directories
+/build/
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Ignore coverage and report files
+coverage/
+*.cover
+*.coverage
+*.coverage.*
+.cache
+.pytest_cache/
+
+# Ignore testing results
+test-results/
+reports/
+
+# Ignore the node_modules/ directory
+node_modules/
+
+# Ignore Yarn lock file
+yarn.lock
+
+# Ignore npm lock file
+package-lock.json
+
+# Ignore IntelliJ idea module files
+
+# Ignore Gradle Wrapper jar file

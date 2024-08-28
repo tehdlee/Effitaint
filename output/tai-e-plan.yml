@@ -1,0 +1,28 @@
+- id: pta
+  options:
+    cs: 1-call
+    only-app: false
+    implicit-entries: true
+    distinguish-string-constants: reflection
+    merge-string-objects: true
+    merge-string-builders: true
+    merge-exception-objects: true
+    handle-invokedynamic: false
+    propagate-types:
+    - reference
+    advanced: null
+    dump: false
+    dump-ci: false
+    dump-yaml: false
+    expected-file: null
+    reflection-inference: solar
+    reflection-log: null
+    taint-config: config/common/pred/pred1.yml
+    plugins: []
+    time-limit: -1
+- id: cg
+  options:
+    algorithm: pta
+    dump: false
+    dump-methods: false
+    dump-call-edges: false
